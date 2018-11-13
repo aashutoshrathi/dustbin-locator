@@ -1,10 +1,10 @@
 function initMap() {
     var icons = {
         full: {
-            icon: 'full.png'
+            icon: 'assets/full.png'
         },
         empty: {
-            icon: 'empty.png'
+            icon: 'assets/empty.png'
         },
     };
 
@@ -39,7 +39,7 @@ function initMap() {
 		
 				google.maps.event.addListener(marker, 'click', (function (marker, jagah) {
 					return function () {
-						infowindow.setContent(`<strong>${jagah.info}</strong><br>	Dustbin: ${jagah.status.}`);
+						infowindow.setContent(`<strong>${jagah.info}</strong><br>Dustbin: ${jagah.status}`);
 						infowindow.open(map, marker);
 					}
 				})(marker, jagah));
